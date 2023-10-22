@@ -74,32 +74,20 @@
     text-align: center;
     font-style: italic;
   }
-  #container3 h1{
+  /*#container3 h1{
     
     text-align: center;
     font-weight: bold;
     font-style: italic;
-  }
-            .btn{
-                position: absolute;
-                top: 145%;
-                left: 47%;
-                background-color: #f9004d;
-                color: white;
-                text-decoration: none;
-                border: 2px solid transparent;
-                font-weight: bold;
-                padding: 13px 30px;
-                border-radius: 30px;
-                transition: .4s;
-            }
+  }*/
+  
   #container4 {
-    margin: 10%;
+    margin-top: 10%;
     padding-top: 2%;
     min-width: 200px;
     
   }
-  #container4 h1{
+  h1{
     
     text-align: center;
     font-weight: bolder;
@@ -108,6 +96,27 @@
   .rating .fa {
     color: #ff523b;
     align-items: center;
+  }
+  #container5 {
+    margin-top: 10%;
+    padding-top: 2%;
+    min-width: 200px;
+    
+  }
+  #form{
+    text-align: center;
+    background-color: rgb(253, 244, 246);
+    
+  }
+  .button-two{
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
 }
   </style>
 </head>
@@ -165,7 +174,7 @@
           <div class="col-lg-4 col-sm-6">
               <div clas="thumnail">
                   <div class="image-container">
-                      <img src="cat1.jpg" class="image" style="width: 100%;">  
+                      <a href="#"><img src="cat1.jpg" class="image" style="width: 100%;"></a>
                       <div class="overlay">
                           <p class="caption">Dresses</p>
                       </div>  
@@ -176,7 +185,7 @@
           <div class="col-lg-4 col-sm-6">
               <div clas="thumnail">
                   <div class="image-container">
-                      <img src="cat2.jpg" class="image" style="width: 100%;">  
+                      <a href="#"><img src="cat2.jpg" class="image" style="width: 100%;"></a> 
                       <div class="overlay">
                           <p class="caption">Suits</p>
                       </div>  
@@ -187,7 +196,7 @@
           <div class="col-lg-4 col-sm-6">
               <div clas="thumnail">
                   <div class="image-container">
-                      <img src="cat3.jpg" class="image" style="width: 100%;">  
+                      <a href="#"><img src="cat3.jpg" class="image" style="width: 100%;"></a>
                       <div class="overlay">
                           <p class="caption">Casual</p>
                       </div>  
@@ -195,9 +204,10 @@
               </div>    
           </div>
       </div>
-      <div>
+      <!--<div>
         <button class ="btn" type="button">Explore</button>
-    </div>
+    </div>-->
+
   </div>
   
   
@@ -333,12 +343,27 @@
   </div>
 </div>
 <!--Contact-->
-<div class="container-sm">
-  <div class="row">
-    <div class="col-12 bg-dark">
+<div class="container-sm" id="container5">
+  <h1>Contact Us</h2>
+  <form action="/action_page.php" id="form">
+    <div class="card-2">
+      <form class = "form" action = "/submit" method = "post">
+          <label for = "name">Full Name:</label><br>
+          <input type = "text" id = "name" name = "name" required><br><br>
+          
+          <label for = "email">Email:</label><br>
+          <input type="email" id = "email" name = "email" required><br><br>
 
-    </div>
+          <label for="subject">Subject:</label><br>
+          <input type="text" id="subject" name="subject" required><br><br>
+      
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="10" cols="50" required></textarea><br><br>
+      </form><br>
+      <a class="button-two" href="#">Submit</a>
   </div>
+  </form>
+</div>
 
 </div>
 </body>
